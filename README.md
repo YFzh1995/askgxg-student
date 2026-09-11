@@ -1,30 +1,70 @@
 # AskGXG-student
 
-面向财会、商科在校生的求职类 AI Skill 集合。
+面向财会、商科在校生的求职类 AI Skill 集合，配合《观星哥校招宝典（财会商科版）》使用。
 
 每个 Skill 解决一个具体问题，处理学生手上的真实材料——一条招聘、一段经历、一次面试。它不是知识库，不是提示词合集，也不是文章末尾的赠品。读正文获得的是通用判断方法，Skill 做的是把它用在你这一个具体材料上。
 
 ## 已发布
 
-| Skill | 名称 | 解决什么 |
-| --- | --- | --- |
-| `askgxg-student-job-reading` | 看懂岗位 | 拿到一条招聘，看不懂职责实际指什么工作 |
+| Skill | 名称 | 解决什么 | 对应正文 |
+| --- | --- | --- | --- |
+| `askgxg-student-company-reading` | 看懂公司和行业 | 拿到一家公司的招聘，不知道它是靠什么赚钱的 | 第二章 2.1 看懂行业和公司 |
+| `askgxg-student-job-reading` | 看懂岗位 | 拿到一条招聘，看不懂职责实际指什么工作 | 第二章 2.2 看懂岗位 |
+
+其余 Skill 正在开发，会陆续加入。
+
+## 安装
+
+Skill 需要放在支持 Skill 机制的环境里，推荐使用 WorkBuddy。
+
+### 一条命令
+
+```
+npx skills add YFzh1995/askgxg-student -g
+```
+
+如果提示找不到 `npx`，先安装 Node.js：打开 nodejs.org 下载 LTS 版本，按默认选项装好，再运行上面的命令。
+
+### 手动安装
+
+点本页右上角绿色的 Code 按钮，选 Download ZIP。解压后，把 `skills/` 里的每个文件夹整个复制到下面这个位置：
+
+| 环境 | 放置位置 |
+| --- | --- |
+| WorkBuddy（Windows） | `C:\Users\你的用户名\.workbuddy\skills\` |
+| WorkBuddy（macOS / Linux） | `~/.workbuddy/skills/` |
+| opencode（Windows） | `C:\Users\你的用户名\.config\opencode\skills\` |
+| opencode（macOS / Linux） | `~/.config/opencode/skills/` |
+
+文件夹不存在就自己新建，名字要一模一样。复制完重启工作环境，Skill 才会被加载。
 
 ## 怎么用
 
-这些 Skill 运行在支持 Skill 机制的工作环境中（如 WorkBuddy）。
+装好以后用自然语言说话就行，不需要记命令。
 
-安装：把 `skills/<skill-name>/` 整个目录放进工作环境的 Skill 目录（通常为 `~/.workbuddy/skills/`），重启后即可调用。
-
-以「看懂岗位」为例，装好后可以这样说：
+以「看懂岗位」为例：
 
 - 「用看懂岗位帮我看这份招聘」
 - 或者直接把招聘信息贴过来，问「这个岗位到底干什么」
+
+「看懂公司和行业」同理：
+
+- 「这家公司我不了解，帮我讲讲它做什么生意」
+- 「我拿到 XX 公司的招聘，它到底是靠什么赚钱的」
+
+也可以直接点名调用：
+
+```
+/askgxg-student-job-reading
+/askgxg-student-company-reading
+```
 
 ## 目录结构
 
 ```
 skills/
+├── askgxg-student-company-reading/
+│   └── SKILL.md
 └── askgxg-student-job-reading/
     └── SKILL.md
 ```
