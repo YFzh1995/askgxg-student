@@ -17,13 +17,19 @@
 
 Skill 需要放在支持 Skill 机制的环境里，推荐使用 WorkBuddy。
 
-### 一条命令
+### WorkBuddy：一条命令
+
+macOS / Linux 打开「终端」，把下面这行整个复制进去，回车：
 
 ```
-npx skills add YFzh1995/askgxg-student -g
+curl -fsSL https://raw.githubusercontent.com/YFzh1995/askgxg-student/main/install.sh | bash
 ```
 
-如果提示找不到 `npx`，先安装 Node.js：打开 nodejs.org 下载 LTS 版本，按默认选项装好，再运行上面的命令。
+装完重启 WorkBuddy，技能才会被加载。
+
+这行命令只做一件事：把仓库里的技能文件夹复制到 `~/.workbuddy/skills/`。不改系统设置，不装别的软件。
+
+Windows 请用下面的手动方式。
 
 ### 手动安装
 
@@ -37,6 +43,18 @@ npx skills add YFzh1995/askgxg-student -g
 | opencode（macOS / Linux） | `~/.config/opencode/skills/` |
 
 文件夹不存在就自己新建，名字要一模一样。复制完重启工作环境，Skill 才会被加载。
+
+**要用复制，不要用快捷方式。** WorkBuddy 的技能扫描不跟随符号链接，用链接指过去会扫不到。
+
+### 其他环境
+
+如果用的是 opencode、Codex、Claude Code 这类工具，也可以让 `skills` 命令行来装：
+
+```
+npx skills add YFzh1995/askgxg-student -g --copy
+```
+
+**WorkBuddy 用户不要用这条命令。** 它目前不识别 WorkBuddy 的技能目录，会把文件装到别的地方——或者建一个 WorkBuddy 扫不到的符号链接。
 
 ## 怎么用
 
@@ -62,6 +80,7 @@ npx skills add YFzh1995/askgxg-student -g
 ## 目录结构
 
 ```
+install.sh                          # 安装脚本
 skills/
 ├── askgxg-student-company-reading/
 │   └── SKILL.md
