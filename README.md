@@ -12,6 +12,7 @@
 | `askgxg-student-job-reading` | 看懂岗位 | 拿到一条招聘，看不懂职责实际指什么工作 | 第二章 2.2 看懂岗位 |
 | `askgxg-student-experience-inventory` | 经历深挖 | 觉得经历单薄、没什么可写，或现有经历描述空泛 | 第三章 3.1 怎样把已有经历盘清楚 |
 | `askgxg-student-internship-value` | 实习导师 | 正在实习，手上的工作看不懂、做不出收获，也不知道怎么留下来 | 第三章 3.2 正在实习的同学，如何把工作价值最大化？ |
+| `askgxg-student-thesis-topic` | 案例项目与论文选题 | 「某公司财务分析」这类大而空的作业想法，不知道怎么收成一个资料够用、范围适当的问题 | 第三章 3.3 做好一份与求职有关的课程报告或论文 |
 
 其余 Skill 正在开发，会陆续加入。
 
@@ -87,6 +88,14 @@ npx skills add YFzh1995/askgxg-student -g --copy
 
 它会在样例或副本上示范方法，但不替你做要交出去的东西，也不写简历。
 
+「案例项目与论文选题」用于把作业想法收成一个能做完、资料也够用的题目：
+
+- 「老师要一份 3000 字案例分析，没定公司，帮我找几个题目」
+- 「我想研究泡泡玛特，但不想写盈利能力分析，能写什么」
+- 「导师让我写《某新能源汽车公司财务风险研究》，这个题能用吗」
+
+它会先帮你挑方向，再讲清楚这个题研究什么、查哪些资料、做哪几张表，**不写开题报告、论文正文、摘要，也不代做检核或修改**。
+
 也可以直接点名调用：
 
 ```
@@ -94,6 +103,7 @@ npx skills add YFzh1995/askgxg-student -g --copy
 /askgxg-student-company-reading
 /askgxg-student-experience-inventory
 /askgxg-student-internship-value
+/askgxg-student-thesis-topic
 ```
 
 ## 目录结构
@@ -107,8 +117,13 @@ skills/
 │   └── SKILL.md
 ├── askgxg-student-internship-value/
 │   └── SKILL.md
-└── askgxg-student-job-reading/
-    └── SKILL.md
+├── askgxg-student-job-reading/
+│   └── SKILL.md
+└── askgxg-student-thesis-topic/
+    ├── SKILL.md
+    └── references/
+        ├── research-and-evidence.md
+        └── thesis-mode-and-integrity.md
 ```
 
 一个 Skill 一个目录，目录名与 `SKILL.md` 里的 `name` 字段一致。单文件为主——内容规模需要独立维护清单时才会拆出 `references/`。
