@@ -10,6 +10,7 @@
 | --- | --- | --- | --- |
 | `askgxg-student-company-reading` | 看懂公司和行业 | 拿到一家公司的招聘，不知道它是靠什么赚钱的 | 第二章 2.1 看懂行业和公司 |
 | `askgxg-student-job-reading` | 看懂岗位 | 拿到一条招聘，看不懂职责实际指什么工作 | 第二章 2.2 看懂岗位 |
+| `askgxg-student-experience-inventory` | 经历深挖 | 觉得经历单薄、没什么可写，或现有经历描述空泛 | 第三章 3.1 怎样把已有经历盘清楚 |
 
 其余 Skill 正在开发，会陆续加入。
 
@@ -70,11 +71,17 @@ npx skills add YFzh1995/askgxg-student -g --copy
 - 「这家公司我不了解，帮我讲讲它做什么生意」
 - 「我拿到 XX 公司的招聘，它到底是靠什么赚钱的」
 
+「经历深挖」用于把手上的经历整理成能写进简历、面试也答得住的内容：
+
+- 「我这段实习就是打杂，帮我看看有什么可写的」
+- 或者把课程报告、竞赛方案、已有的简历发过去，说「帮我盘一盘这些经历」
+
 也可以直接点名调用：
 
 ```
 /askgxg-student-job-reading
 /askgxg-student-company-reading
+/askgxg-student-experience-inventory
 ```
 
 ## 目录结构
@@ -83,6 +90,8 @@ npx skills add YFzh1995/askgxg-student -g --copy
 install.sh                          # 安装脚本
 skills/
 ├── askgxg-student-company-reading/
+│   └── SKILL.md
+├── askgxg-student-experience-inventory/
 │   └── SKILL.md
 └── askgxg-student-job-reading/
     └── SKILL.md
