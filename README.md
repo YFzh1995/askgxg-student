@@ -11,8 +11,11 @@
 | `askgxg-student-company-reading` | 看懂公司和行业 | 拿到一家公司的招聘，不知道它是靠什么赚钱的 | 第二章 2.1 看懂行业和公司 |
 | `askgxg-student-job-reading` | 看懂岗位 | 拿到一条招聘，看不懂职责实际指什么工作 | 第二章 2.2 看懂岗位 |
 | `askgxg-student-experience-inventory` | 经历深挖 | 觉得经历单薄、没什么可写，或现有经历描述空泛 | 第三章 3.1 怎样把已有经历盘清楚 |
+| `askgxg-student-internship-value` | 实习导师 | 正在实习，手上的工作看不懂、做不出收获，也不知道怎么留下来 | 第三章 3.2 正在实习的同学，如何把工作价值最大化？ |
 
 其余 Skill 正在开发，会陆续加入。
+
+上面几个 Skill 的逻辑和边界都经过对照测试，我仍在用真实材料持续打磨。遇到讲得不准、或者答非所问的地方，欢迎提 issue 告诉我。
 
 ## 安装
 
@@ -76,12 +79,21 @@ npx skills add YFzh1995/askgxg-student -g --copy
 - 「我这段实习就是打杂，帮我看看有什么可写的」
 - 或者把课程报告、竞赛方案、已有的简历发过去，说「帮我盘一盘这些经历」
 
+「实习导师」是给正在实习的同学用的，一次聊一件事：
+
+- 「今天带教让我整理平台结算表，我不明白顾客付的钱和到账金额为什么不一样」
+- 「这周的表我核对完了，有几行对不上，帮我看看可能差在哪」
+- 「我实习快结束了，帮我把这段总结一下」
+
+它会在样例或副本上示范方法，但不替你做要交出去的东西，也不写简历。
+
 也可以直接点名调用：
 
 ```
 /askgxg-student-job-reading
 /askgxg-student-company-reading
 /askgxg-student-experience-inventory
+/askgxg-student-internship-value
 ```
 
 ## 目录结构
@@ -92,6 +104,8 @@ skills/
 ├── askgxg-student-company-reading/
 │   └── SKILL.md
 ├── askgxg-student-experience-inventory/
+│   └── SKILL.md
+├── askgxg-student-internship-value/
 │   └── SKILL.md
 └── askgxg-student-job-reading/
     └── SKILL.md
