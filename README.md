@@ -13,6 +13,7 @@
 | `askgxg-student-experience-inventory` | 经历深挖 | 觉得经历单薄、没什么可写，或现有经历描述空泛 | 第三章 3.1 怎样把已有经历盘清楚 |
 | `askgxg-student-internship-value` | 实习导师 | 正在实习，手上的工作看不懂、做不出收获，也不知道怎么留下来 | 第三章 3.2 正在实习的同学，如何把工作价值最大化？ |
 | `askgxg-student-thesis-topic` | 案例项目与论文选题 | 「某公司财务分析」这类大而空的作业想法，不知道怎么收成一个资料够用、范围适当的问题 | 第三章 3.3 做好一份与求职有关的课程报告或论文 |
+| `askgxg-student-interview-review` | 面试复盘 | 面试当场觉得没答好，事后说不清卡在哪，也不知道下一场改什么 | 第五章 5.5 多去面试，把每一场都变成下一场的准备 |
 
 其余 Skill 正在开发，会陆续加入。
 
@@ -96,6 +97,14 @@ npx skills add YFzh1995/askgxg-student -g --copy
 
 它会先帮你挑方向，再讲清楚这个题研究什么、查哪些资料、做哪几张表，**不写开题报告、论文正文、摘要，也不代做检核或修改**。
 
+「面试复盘」用于把一场已经发生的面试拆开看，并把这一次的经验带到下一场：
+
+- 「昨天面的一道题我没答好，帮我看看问题出在哪」
+- 「我把整场面试的问题和我的回答都记下来了，帮我复盘一下」
+- 「上次说的那个毛病，这两场没再犯，是不是就算改掉了」
+
+它会先还原现场、分清哪些是原话哪些是回忆，再挑最值得改的一两处给参考表达，**不从简历编题，也不代替完整的模拟面试**。
+
 也可以直接点名调用：
 
 ```
@@ -104,6 +113,7 @@ npx skills add YFzh1995/askgxg-student -g --copy
 /askgxg-student-experience-inventory
 /askgxg-student-internship-value
 /askgxg-student-thesis-topic
+/askgxg-student-interview-review
 ```
 
 ## 目录结构
@@ -116,6 +126,8 @@ skills/
 ├── askgxg-student-experience-inventory/
 │   └── SKILL.md
 ├── askgxg-student-internship-value/
+│   └── SKILL.md
+├── askgxg-student-interview-review/
 │   └── SKILL.md
 ├── askgxg-student-job-reading/
 │   └── SKILL.md
